@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="main">
+<head>
+    <meta charset="utf-8">
+    <title><%= pkg.name %></title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="libs.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<app>
+
+
+    <div ng-controller="Project">
+        <div ng-hide="project">Drag&Drop folder to load grunt tasks.</div>
+
+        <h1>{{project}}</h1>
+        <p>{{folder}}</p>
+
+        <ul>
+            <li ng-repeat="task in tasks" ng-click="executeTask(task)">{{task.name}}</li>
+        </ul>
+    </div>
+
+</app>

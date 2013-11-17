@@ -1,0 +1,19 @@
+<!doctype html><html ng-app=main><head>
+<!--
+ Grunt - v0.1.0
+ 
+ team@madebysource.com
+ 
+ Copyright 2013 Piffle LLC - All Rights Reserved
+ Unauthorized copying of this file, via any medium is strictly prohibited by law.
+ This file is proprietary and confidential
+ 
+ Author:
+ Marek Hrabe <marekhrabe@abdoc.net> (http://github.com/marekhrabe)
+ 
+ Contributors:
+ Petr Brzek <petrbrzek@abdoc.net> (http://github.com/petrbrzek)
+ 
+ Build v0.1.0 - 2013-11-17
+-->
+<meta charset=utf-8><title>Grunt</title><link rel=stylesheet href=style.css><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><link rel="shortcut icon" href=images/favicon.png><script src=libs.js></script><script src=app.js></script></head><body><app><div ng-controller=Project><div ng-hide=project>Drag&Drop folder to load grunt tasks.</div><h1>{{project}}</h1><p>{{folder}}</p><ul><li ng-repeat="task in tasks" ng-click=executeTask(task)>{{task.name}}</li></ul></div></app></body></html>
